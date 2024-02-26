@@ -11,5 +11,9 @@ Email: alu0101480442@ull.edu.es
 # Introducción
 
 # Realización de los ejercicios
+Para personalizar la apareciencia de la documentacion generada en Typedoc utlizo este paquete `npm install -g  @mxssfd/typedoc-theme`  
+
+Creamos un scripts en donde `nyc npm test` que es el cumbriemiento de código.
+
 
 ## Ejercicio 1: La mudanza

@@ -6,3 +6,4 @@ docs
 .prettierrc.json
 .prettierignore
 package-lock.json
+.nyc_output
