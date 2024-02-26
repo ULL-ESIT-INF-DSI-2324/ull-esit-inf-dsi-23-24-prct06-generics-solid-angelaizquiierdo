@@ -1,4 +1,10 @@
+// Remove the unnecessary opening brace
 {
+  "exclude": [
+    "./tests",
+    "./node_modules",
+    "./dist"
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
     /* Projects */
