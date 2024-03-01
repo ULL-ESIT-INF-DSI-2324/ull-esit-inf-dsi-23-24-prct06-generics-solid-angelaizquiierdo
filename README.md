@@ -13,7 +13,7 @@ Email: alu0101480442@ull.edu.es
 # Realización de los ejercicios
 
 Lo primero que debi hacer es instalar las distintas dependencias de trabajo que no resultaron dificultoso. 
-Aplique una nueva dependencia para la personalizacion de la apareciencia de la documentacion generada en Typedoc instalo la dependecias `@mxssfd/typedoc-theme`.  
+Aplique una nueva dependencia para la personalizacion de la apareciencia de la documentacion generada en Typedoc instalo la dependecias .  
 
 Y realizo el cubrimiento de código con el **coverall**.
 
