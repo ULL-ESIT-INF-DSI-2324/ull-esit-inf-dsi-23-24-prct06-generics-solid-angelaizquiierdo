@@ -5,5 +5,4 @@ docs
 .eslintrc.json
 .prettierrc.json
 .prettierignore
-package-lock.json
 .nyc_output
