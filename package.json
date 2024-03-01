@@ -17,6 +17,7 @@
   "author": "Ángela Zhouling Izquierdo Padrón",
   "license": "ISC",
   "devDependencies": {
+    "@mxssfd/typedoc-theme": "^1.1.3",
     "@types/chai": "^4.3.12",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.11.24",
@@ -34,8 +35,5 @@
     "typedoc": "^0.25.8",
     "typedoc-theme-hierarchy": "^4.1.2",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "@mxssfd/typedoc-theme": "^1.1.3"
   }
 }
