@@ -134,12 +134,12 @@ caja1.EliminarEnser("Cuchillo");
 caja1.ListarEnseres();
 caja1.getPesoTotal();
 
-caja2.ListarEnseres();
+console.log(caja2.ListarEnseres());
 console.log(caja2.BuscarEnser("pepa")); // false
 caja2.EliminarEnser("TV 50");
-caja2.ListarEnseres();
+console.log(caja2.ListarEnseres());
 
-caja3.getPesoTotal();
+console.log(caja3.getPesoTotal());
 
 Prenda1.GetDescripcion();
 Utencilios1.GetDescripcion();
@@ -153,9 +153,8 @@ mudanza.AnadirCaja(caja2);
 mudanza.AnadirCaja(caja3);
 mudanza.AnadirCaja(caja4);
 
-mudanza.ListarTodoEnsers();
-mudanza.getPesoTotal();
+console.log(mudanza.ListarTodoEnsers());
+console.log(mudanza.getPesoTotal());
 mudanza.EliminarCaja(1);
-mudanza.ListarTodoEnsers();
-mudanza.getPesoTotal();
-mudanza.EliminarCaja(1);
+console.log(mudanza.ListarTodoEnsers());
+

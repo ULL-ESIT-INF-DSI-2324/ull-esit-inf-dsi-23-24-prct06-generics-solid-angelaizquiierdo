@@ -2,6 +2,9 @@ import { Tamayo } from "./tamayo";
 import { Enser } from "./enser";
 import { nivelFragilidad } from "./tipo_datos";
 
+/**
+ * 
+ */
 export class Utencilios implements Enser {
   constructor(
     public readonly nombre: string,
