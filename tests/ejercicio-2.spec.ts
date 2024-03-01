@@ -1,7 +1,7 @@
 /**
  * @description : Ejercicio 2 - Pruebas unitarias
  * @author : Ángela Izquierdo Padrón @angelaizquiierdo
- * @Fecha : 21/02/2024 
+ * @Fecha : 21/02/2024
  * @category : Tests
  * @class : DSI-Práctica6
  */
@@ -66,7 +66,7 @@ describe(" Ejercicio 2 Producto", () => {
 describe("Ejercicio 2 PDF", () => {
   it(" PDF generarFactura() ", () => {
     const actualOutput = facturaPDF.generarFactura();
-   
+
     const expectedOutput = `Comprador: Juan Carlos Gonzalez \nDetalle de transaccion: Tarjeta de credito \nFecha: 2023-02-19 \nProducto: Manzana Cantidad: 10 Precio por unidad: 0.5unidad/€ Precio: 5€\nProducto: Fideo intantaneo-Magi Cantidad: 2 Precio por unidad: 1.5unidad/€ Precio: 3€\nProducto: Leche Cantidad: 6 Precio por unidad: 1unidad/€ Precio: 6€\nProducto: Pan rustico Cantidad: 2 Precio por unidad: 0.8unidad/€ Precio: 1.6€\n \nPrecio total: 15.6 €`;
     expect(actualOutput).to.be.equal(expectedOutput);
   });
@@ -157,7 +157,8 @@ describe("Ejercicio 2 HTML", () => {
   });
 
   it("facturaHTML.Imprimirproductos_compra() return \nProducto: Manzana Cantidad: 10 Precio por unidad: 0.5unidad/€ Precio: 5€\nProducto: Fideo intantaneo-Magi Cantidad: 2 Precio por unidad: 1.5unidad/€ Precio: 3€", () => {
-    const expected = "Producto: Manzana Cantidad: 10 Precio por unidad: 0.5unidad/€ Precio: 5€\nProducto: Fideo intantaneo-Magi Cantidad: 2 Precio por unidad: 1.5unidad/€ Precio: 3€\n";
+    const expected =
+      "Producto: Manzana Cantidad: 10 Precio por unidad: 0.5unidad/€ Precio: 5€\nProducto: Fideo intantaneo-Magi Cantidad: 2 Precio por unidad: 1.5unidad/€ Precio: 3€\n";
     expect(facturaHTML.Imprimirproductos_compra()).to.be.equal(expected);
   });
 });
