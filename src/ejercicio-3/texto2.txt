@@ -1,0 +1,4 @@
+Testing and Debugging TypeScript
+In this chapter, I continue the theme of TypeScript development tools started in Chapter 5, which introduced
+the TypeScript compiler. I show you the different ways that TypeScript code can be debugged, demonstrate
+the use of TypeScript and the linter, and explain how to set up unit testing for TypeScript code.
