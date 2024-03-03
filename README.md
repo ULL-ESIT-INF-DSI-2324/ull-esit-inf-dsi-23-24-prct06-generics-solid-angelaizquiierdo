@@ -12,10 +12,7 @@ Email: alu0101480442@ull.edu.es
 
 # Realización de los ejercicios
 
-Lo primero que debi hacer es instalar las distintas dependencias de trabajo que no resultaron dificultoso. 
-Aplique una nueva dependencia para la personalizacion de la apareciencia de la documentacion generada en Typedoc instalo la dependecias .  
-
-Y realizo el cubrimiento de código con el **coverall**.
+Lo primero que debi hacer es instalar las distintas dependencias de trabajo y instale el coveralls y  Instanbul  para el cubrimiento del codigo en mis test.  
 
 ## Ejercicio 1: La mudanza
 
@@ -28,13 +25,22 @@ Este ejercicio hay que aplicar el principio SOLID `Open-closed principle`. Tuve 
 
 ## Ejercicio 3: Gestor de ficheros
 
-El código proporcionado viola el principio SOLID de Responsabilidad Única (SRP) en la que establece que una clase debe tener una sola razón para cambiar, lo que significa que debe tener una única responsabilidad. Por ello vamos a modificar el código proporcionado respetado este principio.
+El código proporcionado por el profesor incumple en dos principio SOLID:
+* Responsabilidad Única (SRP) en la una clase debe tener una única responsabilidad. 
+* Principio de Inversión de Dependencias (DIP) ya que la clase `FileManager` está directamente acoplada a la implementación concreta de fs proporcionada por Node.js. Esto hace que la clase dependa de detalles de implementación concretos en lugar de abstracciones. Lo que dificulta la extension y el cambio de la implementación(escritura y lectura del archivo) .
 
-Violación del Principio de Responsabilidad Única (SRP):
+Por lo que para solucionar el incluplimiento del principio SOLID cree 2 nuevas clases:
+* Clase `file`: que lee
+* Clase `filewrite`:
 
-La clase FileManager tiene dos responsabilidades principales: leer archivos y escribir archivos. Esto hace que la clase tenga más de una razón para cambiar, lo cual viola el principio de SRP.
-La responsabilidad de lectura y escritura de archivos debería estar en clases separadas, cada una con una única responsabilidad.
-Violación del Principio de Inversión de Dependencias (DIP):
+# Ejercicio 4: Impresoras y escáneres
 
-La clase FileManager está directamente acoplada a la implementación concreta de fs proporcionada por Node.js. Esto hace que la clase dependa de detalles de implementación concretos en lugar de abstracciones.
-La dependencia directa de la clase FileManager de fs dificulta la extensión y el cambio de la implementación de la lógica de lectura y escritura de archivos.
+El código proporcionado por el profesorado incumple el principio de segregación de la interfaz (ISP).
+
+# Ejercicio 5: Servicio de mensajería
+El código proporcionado incumple el principio de inversión de dependencia (Dependency Inversion Principle - DIP) del principio SOLID.
+
+El principio de inversión de dependencia establece dos aspectos fundamentales:
+
+Los módulos de alto nivel no deben depender de los módulos de bajo nivel. Ambos deben depender de abstracciones.
+Las abstracciones no deben depender de los detalles. Los detalles deben depender de las abstracciones.

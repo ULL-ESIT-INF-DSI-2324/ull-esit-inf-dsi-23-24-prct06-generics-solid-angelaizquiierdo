@@ -1,5 +1,5 @@
 /**
- * @description : Ejercicio 2 - Pruebas unitarias
+ * @description : Ejercicio 2 - 31 Pruebas unitarias
  * @author : Ángela Izquierdo Padrón @angelaizquiierdo
  * @Fecha : 21/02/2024
  * @category : Tests
@@ -13,7 +13,7 @@ import { Factura } from "../src/ejercicio-2/factura";
 import { Producto } from "../src/ejercicio-2/producto";
 import { GeneradorPDF } from "../src/ejercicio-2/pdf";
 import { GeneradorHTML } from "../src/ejercicio-2/html";
-import { ColeccionFacturas } from "../src/ejercicio-2/coelccionfacturas.ts";
+import { ColeccionFacturas } from "../src/ejercicio-2/coelccionfacturas";
 
 const producto1 = new Producto("Manzana", 10, 0.5);
 const producto2 = new Producto("Fideo intantaneo-Magi", 2, 1.5);
@@ -61,6 +61,14 @@ describe(" Ejercicio 2 Producto", () => {
   it("producto5.ObtenerprecioTotal() 3", () => {
     expect(producto5.ObtenerprecioTotal()).to.be.equal(3);
   });
+
+  it("producto5.ObtenerNombreProducto() return Coca-cola", () => {
+    expect(producto5.ObtenerNombreProducto()).to.be.equal("Coca-cola");
+  });
+
+  it("producto5.ObtenerPrecio() return 1.5", () => {
+    expect(producto5.ObtenerPrecio()).to.be.equal(1.5);
+  });
 });
 
 describe("Ejercicio 2 PDF", () => {
@@ -103,6 +111,29 @@ describe("Ejercicio 2 PDF", () => {
     expect(facturaPDF.ObtenerDatoComprador()).to.be.equal(
       "Juan Carlos Gonzalez",
     );
+  });
+  const nuevofacturaPDF = new Factura(
+    "Margarita Perez",
+    "Tarjeta de credito",
+    [producto1, producto2, producto3, producto4],
+    "2023-01-25",
+    new GeneradorPDF(),
+  );
+  it("CambiarDatoComprador(Margarita Perez) return Teresa Campos", () => {
+    nuevofacturaPDF.CambiarDatoComprador("Teresa Campos");
+    expect(nuevofacturaPDF.ObtenerDatoComprador()).to.be.equal("Teresa Campos");
+  });
+
+  it("CambiarDetalleTransaccion(Dinero en efectivo) return Dinero en efectivo", () => {
+    nuevofacturaPDF.CambiarDetalleTransaccion("Dinero en efectivo");
+    expect(nuevofacturaPDF.ObtenerDetalleTransaccion()).to.be.equal(
+      "Dinero en efectivo",
+    );
+  });
+
+  it("CambiarFecha(2023-02-19) return 2023-02-19", () => {
+    facturaPDF.CambiarFecha("2023-02-19");
+    expect(facturaPDF.ObtenerFecha()).to.be.equal("2023-02-19");
   });
 });
 
@@ -160,5 +191,39 @@ describe("Ejercicio 2 HTML", () => {
     const expected =
       "Producto: Manzana Cantidad: 10 Precio por unidad: 0.5unidad/€ Precio: 5€\nProducto: Fideo intantaneo-Magi Cantidad: 2 Precio por unidad: 1.5unidad/€ Precio: 3€\n";
     expect(facturaHTML.Imprimirproductos_compra()).to.be.equal(expected);
+  });
+});
+
+describe("Ejercicio 2 ColeccionFacturas", () => {
+  it("coleccionFacturas.ObtenerFacturas() return [facturaPDF]", () => {
+    expect(coleccionFacturas.ObtenerFacturas()).to.be.deep.equal([facturaPDF]);
+  });
+
+  it("coleccionFacturas.NombreFactura(0) return Juan Carlos Gonzalez", () => {
+    expect(coleccionFacturas.NombreFactura(0)).to.be.equal(
+      "Juan Carlos Gonzalez",
+    );
+  });
+
+  it("coleccionFacturas.ObtenerTodosLosNombres() return [Juan Carlos Gonzalez]", () => {
+    expect(coleccionFacturas.ObtenerTodosLosNombres()).to.be.deep.equal([
+      "Juan Carlos Gonzalez",
+    ]);
+  });
+
+  it("coleccionFacturas.EliminarFactura(0) return []", () => {
+    coleccionFacturas.EliminarFactura(0);
+    expect(coleccionFacturas.ObtenerFacturas()).to.be.deep.equal([]);
+  });
+
+  it("coleccionFacturas.Agregarfactura(facturaHTLM) return [facturaHTML]", () => {
+    coleccionFacturas.Agregarfactura(facturaHTML);
+    expect(coleccionFacturas.ObtenerFacturas()).to.be.deep.equal([facturaHTML]);
+  });
+
+  it("coleccionFacturas.GenerarTodasLasFacturas() return [facturaPDF]", () => {
+    expect(coleccionFacturas.GenerarTodasLasFacturas()).to.be.deep.equal([
+      facturaHTML.generarFactura(),
+    ]);
   });
 });

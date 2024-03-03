@@ -27,6 +27,10 @@ export class Utencilios implements Enser {
     return this.fragilidad;
   }
 
+  getPeso(): number {
+    return this.peso;
+  }
+
   getTipoUtencilios(): string|undefined {
     return this.tipo;
   }
@@ -36,14 +40,11 @@ export class Utencilios implements Enser {
   }
 
   GetDescripcion(): string {
-    return `Nombre: ${this.nombre}, Dimensiones: ${this.dimensiones.getDescripcion}, Peso: ${this.peso}kg, Fragilidad: ${this.fragilidad}, Modelo: ${this.modelo}, Tipo: ${this.tipo}`;
+    return `Nombre: ${this.nombre}, Dimensiones: ${this.getdimensiones().getDescripcion()}, Peso: ${this.getPeso()}kg, Fragilidad: ${this.getfragilidad()}, Modelo: ${this.getmodelo()}, Tipo: ${this.getTipoUtencilios()}`;
   }
 }
 
 export class Prenda implements Enser {
-  static getDescripcion() {
-    throw new Error("Method not implemented.");
-  }
   constructor(
     public readonly nombre: string,
     public readonly dimensiones: Tamayo,
@@ -63,8 +64,16 @@ export class Prenda implements Enser {
     return this.fragilidad;
   }
 
+  getPeso(): number {
+    return this.peso;
+  }
+
+  getTipoPrenda(): string {
+    return this.tipo_predas;
+  }
+
   GetDescripcion(): string {
-    return `Nombre: ${this.nombre}, Dimensiones: ${this.dimensiones.getDescripcion}, Peso ${this.peso}kg ,Fragilidad: ${this.fragilidad}, Tipo: ${this.tipo_predas}`;
+    return `Nombre: ${this.nombre}, Dimensiones: ${this.dimensiones.getDescripcion()}, Peso ${this.getPeso()}kg ,Fragilidad: ${this.getfragilidad()}, Tipo: ${this.getTipoPrenda()}`;
   }
 }
 
@@ -88,8 +97,12 @@ export class Vajilla implements Enser {
     return this.fragilidad;
   }
 
+  getmaterial(): string {
+    return this.material;
+  }
+
   GetDescripcion(): string {
-    return `Nombre: ${this.nombre}, Dimensiones: ${this.dimensiones}, Fragilidad: ${this.fragilidad}, Material: ${this.material}`;
+    return `Nombre: ${this.nombre}, Dimensiones: ${this.getdimensiones().getDescripcion()}, Fragilidad: ${this.getfragilidad()}, Material: ${this.getmaterial()}`;
   }
 }
 
@@ -109,7 +122,19 @@ export class DispositivoElectronico implements Enser {
     return this.dimensiones;
   }
 
+  getPeso(): number {
+    return this.peso;
+  }
+
+  getTipo(): string {
+    return this.tipo;
+  }
+
+  getmodelo(): string {
+    return this.modelo;
+  }
+
   GetDescripcion(): string {
-    return `Nombre: ${this.nombre}, Dimensiones: ${this.dimensiones.getDescripcion}, Peso: ${this.peso}kg , Tipo: ${this.tipo}, Modelo: ${this.modelo},`;
+    return `Nombre: ${this.getNombre()}, Dimensiones: ${this.getdimensiones().getDescripcion()}, Peso: ${this.getPeso()}kg , Tipo: ${this.getTipo()}, Modelo: ${this.getmodelo()}`;
   }
 }

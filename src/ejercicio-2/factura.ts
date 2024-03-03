@@ -44,11 +44,11 @@ export class Factura {
     return this.PrecioTotal;
   }
 
-  DarDatoComprador(DatoComprador: string): void {
+  CambiarDatoComprador(DatoComprador: string): void {
     this.DatoComprador = DatoComprador;
   }
 
-  DarDetalleTransaccion(DetalleTransaccion: string): void {
+  CambiarDetalleTransaccion(DetalleTransaccion: string): void {
     this.DetalleTransaccion = DetalleTransaccion;
   }
 
@@ -64,7 +64,7 @@ export class Factura {
     this.PrecioTotal -= producto.ObtenerprecioTotal();
   }
 
-  DarFecha(Fecha: string): void {
+  CambiarFecha(Fecha: string): void {
     this.Fecha = Fecha;
   }
 

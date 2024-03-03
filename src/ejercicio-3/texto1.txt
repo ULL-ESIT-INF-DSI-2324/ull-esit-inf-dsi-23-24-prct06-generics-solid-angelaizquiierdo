@@ -1,5 +1,1 @@
-Using the TypeScript Compiler
-In this chapter, I show you how to use the TypeScript compiler, which is responsible for transforming
-TypeScript code into JavaScript that can be executed by browsers or the Node.js runtime. I also describe the
-compiler configuration options that are most useful for TypeScript development, including those that are
-used with the web application frameworks covered in Part 3 of this book.
+Este es el contenido inicial del archivo.
