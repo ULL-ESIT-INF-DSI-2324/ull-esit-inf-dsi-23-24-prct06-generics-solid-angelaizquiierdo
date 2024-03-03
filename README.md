@@ -84,7 +84,10 @@ Por lo que para solucionarlo creamos una interfaz `NotificationService` que defi
 
 Los ejercicios me han hecho enteder los principios SOLID asi mismo aplicarlo a consciencia para cumplir estos principios para los ejercicios 1 y 2. Lo que más dificulto fue hacer los tests ya algunos cubrimiento no se pudo hacer ejemplo añadir elementos del ejercicio 2 o lo que son demostrar la salida por consola al ser tan largo tenia idea de como hacer. Asimismo las salidas tenia que ser muy especifico los espacios coicidir y al ser texto largo resultaron dificultoso. 
 
-Algunos cubrimiento no se pudo realizar por eso.
+Algunos test unitarios de algunas funciones no se a podido realizar. Aqui esta el cubrimiento de codigo de la práctica 6
+
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2324/ull-esit-inf-dsi-23-24-prct06-generics-solid-angelaizquiierdo/badge.svg)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2324/ull-esit-inf-dsi-23-24-prct06-generics-solid-angelaizquiierdo)
+
 
 Y por ultimo intente realizar las Integración continua mediante GitHub Actions algo que no puede seguramente debido a que intente instalar una tematica para typedoc por cada vez que se subia y intentaba realizar los ejercicios salia un error de los distintos tipos de compilación.
 
