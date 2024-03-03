@@ -25,14 +25,14 @@ describe("Ejercicio 5 - EmailService", () => {
     consoleOutput = [];
   });
 
-  it("emailservice.notify(texto) return in console Sending notification by email: Good evening, I wanted to request a tutorial tomorrow at 3:00 p.m. Computer System Development (DSI).", () => {
+  it("emailservice.notify(texto) return en console Enviando notificación por correo electrónico: Buenas noches, quería solicitar un tutorial mañana a las 15 h. Desarrollo de Sistemas Computacionales (DSI).", () => {
     const emailservice = new EmailService();
     // Stub console.log
     const originalConsoleLog = console.log;
     console.log = stubConsoleLog as any; // Forzamos el tipo por ahora
-    emailservice.notify("Good evening, I wanted to request a tutorial tomorrow at 3:00 p.m. Computer System Development (DSI).");
+    emailservice.notify("Buenas noches, quería solicitar un tutorial mañana a las 15 h. Desarrollo de Sistemas Computacionales (DSI).");
     console.log = originalConsoleLog; // Restauramos console.log
-    expect(consoleOutput).to.deep.equal(["Sending notification by email: Good evening, I wanted to request a tutorial tomorrow at 3:00 p.m. Computer System Development (DSI)."]);
+    expect(consoleOutput).to.deep.equal(["Enviando notificación por correo electrónico: Buenas noches, quería solicitar un tutorial mañana a las 15 h. Desarrollo de Sistemas Computacionales (DSI)."]);
   });
 });
 
@@ -41,14 +41,14 @@ describe(" Ejercicio 5 - ShortMessageService", () => {
     consoleOutput = [];
   });
 
-  it("mensajecorto.notify(texto) return in console Sending notification by short message: Elections 2023, go vote at the nearest school", () => {
+  it("mensajecorto.notify(texto) return en console Enviando notificación por SMS: Elecciones 2023, ve a votar al colegio más cercano", () => {
     const mensajecorto = new ShortMessageService();
     // Stub console.log
     const originalConsoleLog = console.log;
     console.log = stubConsoleLog as any; // Forzamos el tipo por ahora
-    mensajecorto.notify("Elections 2023, go vote at the nearest school");
+    mensajecorto.notify("Elecciones 2023, ve a votar al colegio más cercano");
     console.log = originalConsoleLog; // Restauramos console.log
-    expect(consoleOutput).to.deep.equal(["Sending notification by short message: Elections 2023, go vote at the nearest school"]);
+    expect(consoleOutput).to.deep.equal(["Enviando notificación por SMS: Elecciones 2023, ve a votar al colegio más cercano"]);
   });
 });
 
@@ -59,29 +59,29 @@ describe(" Ejercicio 5 - Notifier", () => {
   const mensajeSMS = new ShortMessageService();
     const mensajeEmail= new EmailService();
     
-  it("notifierEmail.sendNotification(texto) return in console Sending notification by email: Good afternoon, we inform you that your order has been shipped. To send you more information about your order, please contact us by replying to this email or calling 555-555-555", () => {
+  it("notifierEmail.sendNotification(texto) return en console Enviando notificación por correo electrónico: Buenas tardes, le informamos que su pedido ha sido enviado. Para enviarle más información sobre su pedido, por favor contáctenos respondiendo a este correo electrónico o llamando al 555-555-555", () => {
     const notifierEmail = new Notifier(mensajeEmail);
     // Stub console.log
     const originalConsoleLog = console.log;
     console.log = stubConsoleLog as any; // Forzamos el tipo por ahora
-    notifierEmail.sendNotification("Good afternoon, we inform you that your order has been shipped. To send you more information about your order, please contact us by replying to this email or calling 555-555-555");
+    notifierEmail.sendNotification("Buenas tardes, le informamos que su pedido ha sido enviado. Para enviarle más información sobre su pedido, por favor contáctenos respondiendo a este correo electrónico o llamando al 555-555-555");
     console.log = originalConsoleLog; // Restauramos console.log
-    expect(consoleOutput).to.deep.equal(["Sending notification by email: Good afternoon, we inform you that your order has been shipped. To send you more information about your order, please contact us by replying to this email or calling 555-555-555"]);
+    expect(consoleOutput).to.deep.equal(["Enviando notificación por correo electrónico: Buenas tardes, le informamos que su pedido ha sido enviado. Para enviarle más información sobre su pedido, por favor contáctenos respondiendo a este correo electrónico o llamando al 555-555-555"]);
   });
 
   beforeEach(() => {
     consoleOutput = [];
   });
 
-  it("notifierSMS.sendNotification(Reply to this SMS to find out more) return in console  Reply to this SMS to find out more", () => {
+  it("notifierSMS.sendNotification(Responde a este SMS para saber más) return en console Enviando notificación por SMS: Responde a este SMS para saber más ", () => {
     const notifierSMS = new Notifier(mensajeSMS);
     
     // Stub console.log
     const originalConsoleLog = console.log;
     console.log = stubConsoleLog as any; // Forzamos el tipo por ahora
-    notifierSMS.sendNotification("Reply to this SMS to find out more");
+    notifierSMS.sendNotification("Responde a este SMS para saber más");
     console.log = originalConsoleLog; // Restauramos console.log
-    expect(consoleOutput).to.deep.equal(["Sending notification by short message: Reply to this SMS to find out more"]);
+    expect(consoleOutput).to.deep.equal(["Enviando notificación por SMS: Responde a este SMS para saber más"]);
   });
 
 });

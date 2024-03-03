@@ -3,7 +3,7 @@ import { Enser } from "./enser";
 
 /**
  * Clase que representa una mudanza
- * @property cajas de tipo Caja<T>[]
+ * @property cajas de tipo Caja<T>[] que contiene las cajas de la mudanza
  * @method AnadirCaja Método para añadir una caja a la mudanza
  * @method removeCaja Método para eliminar una caja de la mudanza
  * @method ListarTodoEnsers Método para listar los Ensers que contiene la mudanza
@@ -11,7 +11,6 @@ import { Enser } from "./enser";
  */
 export class Mudanza<T extends Enser> {
   private cajas: Caja<T>[] = [];
-
  
   /**
    * Método para obtener el peso total de la mudanza

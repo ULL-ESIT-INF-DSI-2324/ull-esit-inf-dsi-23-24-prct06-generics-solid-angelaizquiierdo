@@ -24,7 +24,7 @@ describe("Ejercicio 4 - Printer", () => {
     consoleOutput = [];
   });
 
-  it("should print correctly", () => {
+  it("printer.print() return en consola Printing...", () => {
     const printer = new Printer();
     // Stub console.log
     const originalConsoleLog = console.log;
@@ -40,7 +40,7 @@ describe(" Ejercicio 4 Scanner", () => {
     consoleOutput = [];
   });
 
-  it("should print correctly", () => {
+  it("scanner.scan() return en consola Scanning...", () => {
     const scanner = new Scanner();
     // Stub console.log
     const originalConsoleLog = console.log;
@@ -56,7 +56,7 @@ describe(" Ejercicio 4 PrinterScanner", () => {
     consoleOutput = [];
   });
 
-  it("should print correctly", () => {
+  it("printerscanner1.print() return en consola Printing...", () => {
     const printerscanner1 = new PrinterScanner();
     // Stub console.log
     const originalConsoleLog = console.log;
@@ -70,7 +70,7 @@ describe(" Ejercicio 4 PrinterScanner", () => {
     consoleOutput = [];
   });
 
-  it("should print correctly", () => {
+  it("printscanner.scan() return en consola Scanning...", () => {
     const printscanner = new PrinterScanner();
     // Stub console.log
     const originalConsoleLog = console.log;
