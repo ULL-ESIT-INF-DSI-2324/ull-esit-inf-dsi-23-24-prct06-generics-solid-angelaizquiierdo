@@ -92,6 +92,6 @@ Algunos test unitarios de algunas funciones no se a podido realizar. Aqui esta e
 Y por ultimo intente realizar las Integración continua mediante GitHub Actions algo que no puede seguramente debido a que intente instalar una tematica para typedoc por cada vez que se subia y intentaba realizar los ejercicios salia un error de los distintos tipos de compilación.
 
 
-[!fotos](/fotos/error_integracion_continua_con_Action_Githug.png)
+![fotos](/fotos/error_integracion_continua_con_Action_Githug.png)
 
 
